@@ -135,11 +135,11 @@ class MainChart extends React.Component {
         <Tag color='gold'>{`${balances / Math.pow(10, 18).toFixed(3)} BNB`}</Tag>
       </>
     )},
-    { "title": "Bitch 1", "dataIndex": "hero1", render: (hero, account) => this.renderHero(hero, account) },
-    { "title": "Bitch 2", "dataIndex": "hero2", render: (hero, account) => this.renderHero(hero, account) },
-    { "title": "Bitch 3", "dataIndex": "hero3", render: (hero, account) => this.renderHero(hero, account) },
-    { "title": "Bitch 4", "dataIndex": "hero4", render: (hero, account) => this.renderHero(hero, account) },
-    { "title": "Bitch 5", "dataIndex": "hero5", render: (hero, account) => this.renderHero(hero, account) }
+    { "title": "Hero 1", "dataIndex": "hero1", render: (hero, account) => this.renderHero(hero, account) },
+    { "title": "Hero 2", "dataIndex": "hero2", render: (hero, account) => this.renderHero(hero, account) },
+    { "title": "Hero 3", "dataIndex": "hero3", render: (hero, account) => this.renderHero(hero, account) },
+    { "title": "Hero 4", "dataIndex": "hero4", render: (hero, account) => this.renderHero(hero, account) },
+    { "title": "Hero 5", "dataIndex": "hero5", render: (hero, account) => this.renderHero(hero, account) }
   ]
 
   renderHero = (hero, account) => {
@@ -157,7 +157,7 @@ class MainChart extends React.Component {
       <Tag color='cyan'>{`ID ${hero.id}`}</Tag>
       <Tag color='geekblue'>{`Level ${hero.level}`}</Tag>
       <Divider/>
-      <Button disabled={parseInt(hero.hp) < 200} onClick={() => this.fight(hero, account)}>FUCK</Button>
+      <Button disabled={parseInt(hero.hp) < 200} onClick={() => this.fight(hero, account)}>ATTACK</Button>
       <Button
         danger={needToUpgrade}
         disabled={!needToUpgrade}
